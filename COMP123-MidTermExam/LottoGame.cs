@@ -59,7 +59,55 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
-        public int Property
+        public List<int> ElementList
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public int ElementNumber
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public Random random
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public int SetSize
         {
             get
             {
