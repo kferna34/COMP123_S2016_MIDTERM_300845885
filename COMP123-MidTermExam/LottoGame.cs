@@ -152,6 +152,21 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
+        private void _build()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void _initialize()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void PickElements()
+        {
+            throw new System.NotImplementedException();
+        }
+
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
