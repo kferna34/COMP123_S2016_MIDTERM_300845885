@@ -138,7 +138,7 @@ namespace COMP123_MidTermExam
                 Console.WriteLine("{0}: {1} ", index, NumberList[index]);
                 NumberList.Count();
             }
-            
+
         }
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -168,21 +168,28 @@ namespace COMP123_MidTermExam
         }
 
 
- // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
         public void PickElements()
         {
+            
             if (ElementList.Count > 0)
             {
                 ElementList.Clear();
                 NumberList.Clear();
                 this._build();
             }
+            for (int index = 0; index < ElementNumber; index++)
+            {
+
+            }
             int randomIndex = this.random.Next(0, NumberList.Count);
+            ElementList.Add(NumberList[randomIndex]);
+            NumberList.RemoveAt(randomIndex);
+            ElementList.Sort();
 
         }
 
-       
     }
 }
