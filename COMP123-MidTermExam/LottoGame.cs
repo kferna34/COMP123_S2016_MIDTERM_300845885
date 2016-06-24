@@ -166,12 +166,15 @@ namespace COMP123_MidTermExam
         }
 
 
+ // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+        // CREATE the public PickElements method here ----------------------------
         public void PickElements()
         {
+
             Random random = new Random(); // pseudo number object
-            List<int> numbers = new List<int>();
-            int[] tally = new int[13];
+            List<int> pickNumber = new List<int>();
+            int[] tally = new int[2];
             int maxRolls = 5000000;
 
             // builds the list
@@ -179,17 +182,15 @@ namespace COMP123_MidTermExam
             {
                 int firstDie = random.Next(1, 7);
                 int secondDie = random.Next(1, 7);
-                int dice = firstDie + secondDie;
-                tally[dice]++;
-                diceRolls.Add(dice);
+                int outputNumber = firstDie + secondDie;
+                tally[outputNumber]++;
+                pickNumber.Add(outputNumber);
             }
 
-            diceRolls.Sort();
+            pickNumber.Sort();
 
         }
 
-        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-        // CREATE the public PickElements method here ----------------------------
+       
     }
 }
