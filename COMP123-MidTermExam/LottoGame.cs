@@ -17,14 +17,15 @@ namespace COMP123_MidTermExam
      */
     public abstract class LottoGame
     {
+
+
+
+        // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private list<int> _elementList;
         private int _elementNumber;
         private list<int> _numberList;
         private Random _random;
         private int _setSize;
-
-        // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
         // CREATE private fields here --------------------------------------------
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -63,23 +64,22 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.ElementList;
             }
 
-            set
-            {
-            }
+
         }
 
         public int ElementNumber
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.ElementNumber;
             }
 
             set
             {
+                this.ElementNumber = value;
             }
         }
 
@@ -87,23 +87,21 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.NumberList;
             }
 
-            set
-            {
-            }
         }
 
         public Random random
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.random;
             }
 
             set
             {
+                this.random = value;
             }
         }
 
@@ -111,20 +109,35 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.SetSize;
             }
 
             set
             {
+                this.SetSize = value;
             }
         }
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
         // CREATE the private _initialize method here -----------------------------
+        private void _initialize()
+        {
 
+            this._numberList = NumberList;
+            this._elementList = ElementList;
+            this._random = random;
+        }
         // CREATE the private _build method here -----------------------------------
-
+        private void _build()
+        {
+            for (int index = 1; index < SetSize; index++)
+            {
+                Console.WriteLine("{0}: {1} ", index, NumberList[index]);
+            }
+        }
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         /**
@@ -152,19 +165,27 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        private void _build()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        private void _initialize()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public void PickElements()
         {
-            throw new System.NotImplementedException();
+            Random random = new Random(); // pseudo number object
+            List<int> numbers = new List<int>();
+            int[] tally = new int[13];
+            int maxRolls = 5000000;
+
+            // builds the list
+            for (int index = 0; index < maxRolls; index++)
+            {
+                int firstDie = random.Next(1, 7);
+                int secondDie = random.Next(1, 7);
+                int dice = firstDie + secondDie;
+                tally[dice]++;
+                diceRolls.Add(dice);
+            }
+
+            diceRolls.Sort();
+
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
