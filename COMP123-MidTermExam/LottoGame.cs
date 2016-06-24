@@ -136,7 +136,9 @@ namespace COMP123_MidTermExam
             for (int index = 1; index < SetSize; index++)
             {
                 Console.WriteLine("{0}: {1} ", index, NumberList[index]);
+                NumberList.Count();
             }
+            
         }
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -171,23 +173,16 @@ namespace COMP123_MidTermExam
         // CREATE the public PickElements method here ----------------------------
         public void PickElements()
         {
-
-            Random random = new Random(); // pseudo number object
-            List<int> pickNumber = new List<int>();
-            int[] tally = new int[2];
-            int maxRolls = 5000000;
-
-            // builds the list
-            for (int index = 0; index < maxRolls; index++)
+            if (_elementList > 0)
             {
-                int firstDie = random.Next(1, 7);
-                int secondDie = random.Next(1, 7);
-                int outputNumber = firstDie + secondDie;
-                tally[outputNumber]++;
-                pickNumber.Add(outputNumber);
+                ElementList.Clear();
+                NumberList.Clear();
+                this._build();
             }
+           else
+            { 
 
-            pickNumber.Sort();
+            }
 
         }
 
