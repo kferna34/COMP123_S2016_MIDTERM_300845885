@@ -35,6 +35,10 @@ namespace COMP123_MidTermExam
         {     
             // Call the Menu
             LottoMenu();
+            //call lotto 649
+            Lotto649 lotto649 = new Lotto649();
+            //call lottomax
+            LottoMax lottoMax = new LottoMax();
         }
 
         /**

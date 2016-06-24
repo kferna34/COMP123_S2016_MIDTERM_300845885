@@ -173,16 +173,13 @@ namespace COMP123_MidTermExam
         // CREATE the public PickElements method here ----------------------------
         public void PickElements()
         {
-            if (_elementList > 0)
+            if (ElementList.Count > 0)
             {
                 ElementList.Clear();
                 NumberList.Clear();
                 this._build();
             }
-           else
-            { 
-
-            }
+            int randomIndex = this.random.Next(0, NumberList.Count);
 
         }
 

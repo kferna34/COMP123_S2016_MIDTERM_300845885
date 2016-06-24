@@ -31,9 +31,14 @@ namespace COMP123_MidTermExam
 
         }
 
-        public void GenerateLottoNumbers()
+        public void GenerateLottoNumbers(LottoGame pickElement)
         {
             throw new System.NotImplementedException();
+        }
+
+        internal void GenerateLottoNumbers()
+        {
+            throw new NotImplementedException();
         }
 
         // CREATE the public GenerateLottoNumbers method here ----------------
