@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * Author: Krytia Fernandez
+ * studentnumber: 300845885
+ * Last Modified : June 24,2016
+ * program description: a program that randomly generates lottery numbers
+ * version 0.0.0.
+ */
 namespace COMP123_MidTermExam
 {
     /**
